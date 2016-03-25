@@ -11,11 +11,23 @@ var elixir = require('laravel-elixir');
  |
  */
 
-elixir(function(mix) {
+elixir(function (mix) {
     mix.copy(
         'bower_components/foundation-sites/scss',
         'resources/assets/sass/foundation'
     );
-    
-    mix.sass('app.scss');
+
+    mix.copy(
+        'resources/assets/img',
+        'public/img'
+    );
+
+    mix.copy(
+        'resources/assets/img/favicon',
+        'public/favicon'
+    );
+
+    mix.sass('style.scss');
+
+    mix.version(['*']);
 });
