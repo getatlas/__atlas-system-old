@@ -1,0 +1,101 @@
+//================================================//
+// TEMPORARY
+// code in here should be split into atoms, molecules
+// or used as classes
+//================================================//
+
+
+//================================================//
+// SEARCH RESULTS
+.autocomplete-suggestions {
+  display: none;
+  height: 75%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  z-index: 10;
+  width: 100%;
+  @include color-bg-white;
+  @include border-solid-bottom;
+  @include border-color-neutral;
+  @media (min-width: 500px) {
+    top: 8px;
+  }
+  @media (min-width: 900px) {
+    top: 0;
+  }
+}
+.autocomplete-group, .autocomplete-suggestion {
+  @include padding-lr2;
+  @include padding-tb05;
+}
+.autocomplete-group-muted {
+  @include opacity-3;
+}
+.autocomplete-suggestion {
+  white-space: nowrap;
+  overflow: hidden;
+  @include cursor-pointer;
+  &:hover {
+    @include color-tint-dark-1;
+  }
+}
+.autocomplete-seemore {
+  @include padding-lr2;
+  @include padding-b05;
+  @include opacity-1;
+}
+
+
+.transparent-card{
+  background: transparentize($cream, 0.9) !important;
+  color: white;
+  a {
+    color: white;
+    font-weight: 700;
+  }
+  td {
+    color: white;
+    background: transparentize($cream, 0.95) !important;
+  }
+  input {
+    color: white;
+    background: transparentize($cream, 0.95);
+    &:focus {
+      background: transparentize($cream, 0.9);
+    }
+    &:hover {
+      background: transparentize($cream, 0.85);
+    }
+  }
+}
+
+.modal {
+  height: 100%;
+  width: 100%;
+  z-index: 1000;
+  background: transparentize($dark, 0.1);
+  .transparent-card{
+    background: transparentize($dark, 0.2) !important;
+  }
+}
+
+.thumbnail {
+  padding: 18px;
+  height:94px;
+  width: 94px;
+  font-size:36px;
+}
+
+.terminal {
+  p, pre , span {
+    @include margin-none;
+  }
+}
+
+.height-full {
+  height: 100%;
+}
+
+.height-logo {
+  height: 1em;
+}
