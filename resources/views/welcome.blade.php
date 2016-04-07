@@ -1,0 +1,3 @@
+@set($var = 'string')
+
+{{ $var }}

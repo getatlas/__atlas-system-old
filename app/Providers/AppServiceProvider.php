@@ -15,6 +15,10 @@ class AppServiceProvider extends ServiceProvider
         Blade::directive('has', function ($expression) {
             return "<?php if(!empty(trim(\$__env->yieldContent{$expression}))): ?>";
         });
+
+        Blade::directive('set', function($expression) {
+            return "<?php {$expression}; ?>";
+        });
     }
 
     /**
